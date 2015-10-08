@@ -1,30 +1,14 @@
+Printer class: 
+- has all 7 gallows states
+- has @current_state that gets incremented when a wrong guess occurs
+- has a method to format misses
+- has a method to format the word based on its current state ie: _ _ _ _ _ S
+- has a method to print gallow state, misses, and word
 
-##### combine these two? #####
-Gallows class:
-- has methods that return strings of the seven different states of the gallows
-- has @current_state variable that can be incremented when a miss occurs in order to print the correct 
-gallows state
-
-Printer class:
-- only prints data given to it from other objects
-##############################
-
-##### combine these two? #####
-WordGenerator class:
-- load a file of shit ton of words
-- parse file into array of shit ton of words
-- randomly select word from shit ton of words
-
-WordToGuess class: 
-- has array that is letters of given word ie: ["h","e","l","l","o"]
-- has array of blank spaces equal in length to given word ie: ["_","_","_","_","_"]
-- as a correct guess is made, the letter or letters will be mapped onto the array of blank spaces.
-#############################
-
-#### add this to CLI class? ######
-MissesAndHits class:
-- have an array of letters that are wrong guesses
-- have an array of total letters guessed
+Word class:
+- method to generate random word based on list of words
+- splits word into array of letters
+- creates another array of blank spaces
 
 HangpersonCLI class:
 - start the game
@@ -32,3 +16,5 @@ HangpersonCLI class:
 - turn method that printers current state, executes make_a_guess method
 - make_a_guess method until game_over condition
 - make_a_guess will increment current_state if guess = wrong, not change state if guess = right || guess = already guessed
+- stores total letters guessed in an array
+- stores wrong guesses in an array
