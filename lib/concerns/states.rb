@@ -59,6 +59,59 @@ OOO
   end    
 
   def fourth_miss
+    <<-OOO
+    _____ 
+   |/   |
+   |   (oo)
+   |  ._|_.
+   |    |
+   |   
+   |
+___|___
+
+OOO
+  end
+
+  def fifth_miss
+    <<-OOO
+    _____ 
+   |/   |
+   |   (oo)
+   |  ._|_.
+   |    |
+   |  _|
+   |
+___|___
+
+OOO
+  end
+
+  def sixth_miss
+    <<-OOO
+    _____ 
+   |/   |
+   |   (oo)
+   |  ._|_.
+   |    |
+   |  _| |_
+   |
+___|___
+
+OOO
+  end
+
+  def dead
+    <<-OOO
+    _____ 
+   |/   |
+   |    |
+   |   (xx)
+   |  ._|_.
+   |    |
+   |  _| |_
+___|___
+
+OOO
   end
 
 end
