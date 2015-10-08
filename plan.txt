@@ -1,0 +1,34 @@
+
+##### combine these two? #####
+Gallows class:
+- has methods that return strings of the seven different states of the gallows
+- has @current_state variable that can be incremented when a miss occurs in order to print the correct 
+gallows state
+
+Printer class:
+- only prints data given to it from other objects
+##############################
+
+##### combine these two? #####
+WordGenerator class:
+- load a file of shit ton of words
+- parse file into array of shit ton of words
+- randomly select word from shit ton of words
+
+WordToGuess class: 
+- has array that is letters of given word ie: ["h","e","l","l","o"]
+- has array of blank spaces equal in length to given word ie: ["_","_","_","_","_"]
+- as a correct guess is made, the letter or letters will be mapped onto the array of blank spaces.
+#############################
+
+#### add this to CLI class? ######
+MissesAndHits class:
+- have an array of letters that are wrong guesses
+- have an array of total letters guessed
+
+HangpersonCLI class:
+- start the game
+- print instructions
+- turn method that printers current state, executes make_a_guess method
+- make_a_guess method until game_over condition
+- make_a_guess will increment current_state if guess = wrong, not change state if guess = right || guess = already guessed
