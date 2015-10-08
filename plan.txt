@@ -11,8 +11,11 @@ Word class:
 - creates another array of blank spaces
 
 HangpersonCLI class:
-- start the game
-- print instructions
+- initialize Game object
+- initialize Word object
+- initialize Printer object
+- Printer.print_instructions
+- Word.choose_random_word
 - turn method that printers current state, executes make_a_guess method
 - make_a_guess method until game_over condition
 - make_a_guess will increment current_state if guess = wrong, not change state if guess = right || guess = already guessed
