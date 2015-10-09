@@ -39,6 +39,17 @@ class Printer
     misses(word_gen.misses)  
   end
 
+  def win_message
+    puts "You won!"
+  end 
+
+  def lose_message
+    puts "You really suck"
+  end 
+
+  def print_help
+    puts "Seriously?" 
+  end 
 end
 
 
