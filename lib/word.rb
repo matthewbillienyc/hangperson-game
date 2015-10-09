@@ -6,7 +6,21 @@ class Word
   def initialize
     @word_list = ["iterate", "enumerator", "conditial", "boolean", "flow", "github", "commit", "octocat", "flatiron", "internet", "developer", "hacking", "hacker"]
     @alphabet = "abcdefghijklmnopqrstuvwxyz".split("")
-    @users_array = []
+    choose_random_word
+    word_array
+    blank_space_array
+  end
+
+  def misses
+    @misses ||= []
+  end
+
+  def users_array
+    @users_array ||= []
+  end
+
+  def letters_guessed
+    @letters_guessed ||= []
   end
 
   def choose_random_word
@@ -23,11 +37,11 @@ class Word
 
   def add_letter(correct_guess)
     correct_letter_indexes = []
-    @word_array.each_with_index do |letter, index|
+    word_array.each_with_index do |letter, index|
       correct_letter_indexes << index if letter == correct_guess
     end
     correct_letter_indexes.each do |index|
-      @users_array[index] = correct_guess
+      users_array[index] = correct_guess
     end
   end
 

@@ -1,6 +1,6 @@
 module States
 
-  def start_state
+  def state_start
     <<-OOO
     _____ 
    |/   |
@@ -12,11 +12,10 @@ module States
 ___|___
 
 OOO
-
   end
 
-  def first_miss
-    <<-OOO
+  def state_one_miss
+<<-OOO
     _____ 
    |/   |
    |   (oo)
@@ -27,10 +26,9 @@ OOO
 ___|___
 
 OOO
-
   end
 
-  def second_miss
+  def state_two_miss
     <<-OOO
     _____ 
    |/   |
@@ -44,7 +42,7 @@ ___|___
 OOO
   end
 
-  def third_miss
+  def state_three_miss
     <<-OOO
     _____ 
    |/   |
@@ -58,7 +56,7 @@ ___|___
 OOO
   end    
 
-  def fourth_miss
+  def state_four_miss
     <<-OOO
     _____ 
    |/   |
@@ -72,7 +70,7 @@ ___|___
 OOO
   end
 
-  def fifth_miss
+  def state_five_miss
     <<-OOO
     _____ 
    |/   |
@@ -86,7 +84,7 @@ ___|___
 OOO
   end
 
-  def sixth_miss
+  def state_six_miss
     <<-OOO
     _____ 
    |/   |
@@ -100,7 +98,7 @@ ___|___
 OOO
   end
 
-  def dead
+  def state_dead
     <<-OOO
     _____ 
    |/   |
