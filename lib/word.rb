@@ -4,8 +4,18 @@ class Word
   attr_accessor :word
 
   def initialize
-    @word_list = ["iterate", "enumerator", "conditial", "boolean", "flow", "github", "commit", "octocat", "flatiron", "internet", "developer", "hacking", "hacker"]
+    @word_list = ["iterate", "enumerator", "conditional", "boolean", "flow", "github", "commit", "octocat", "flatiron", "internet", "developer", "hacking", "hacker", "hashtronauts", "flombaum", "turing", "lovelace", "hopper", "debugging", "asia", "meredith", "hideyuki", "matthew", "vinnie", "jeff", "ian", "deniz"]
     @alphabet = "abcdefghijklmnopqrstuvwxyz".split("")
+    choose_random_word
+    word_array
+    blank_space_array
+  end
+
+  def reset
+    @misses.clear
+    @users_array.clear
+    @letters_guessed.clear
+    @word_array.clear
     choose_random_word
     word_array
     blank_space_array

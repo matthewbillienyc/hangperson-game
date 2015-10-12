@@ -6,31 +6,30 @@ require_relative '../lib/game.rb'
 
 class CLI
 
-  attr_accessor :cli_on
-  attr_reader :game
+  attr_accessor :cli_on, :game
 
   def initialize 
     @cli_on = true
-    @game = Game.new
-    puts "Welcome to Hangperson! Type play to play a new game, exit to exit, or help to get help."
+    puts "Welcome to Hangperson! Prepare to be ROCKED!!"
   end
 
 
   def run
     while @cli_on == true
+      puts "What would you like to do? ('play', 'exit')>> "
       choice = gets.chomp
       case choice
-      when "help"
-        game.printer.print.help
       when "play"
+        game = Game.new
         game.run
       when "exit"
         puts "Goodbye!"
         @cli_on = false
+      else
+        puts "Huh?"
       end 
     end 
   end 
-
 
 end 
 

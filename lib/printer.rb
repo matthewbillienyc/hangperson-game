@@ -11,7 +11,7 @@ class Printer
   end
 
   def state_array # this is an array of the 8 different possible gallow states
-    [state_start, state_one_miss, state_two_miss, state_three_miss, state_four_miss, state_five_miss, state_six_miss, state_dead]
+    [state_start, state_one_miss, state_two_miss, state_three_miss, state_four_miss, state_five_miss, state_six_miss, state_dead, state_win, state_skull]
   end
 
   def gallows # prints current state of the gallows
@@ -34,22 +34,24 @@ class Printer
   # need a method that formats and puts wrong guess (misses)
 
   def full_display
+    print "-" * 40 + "\n"
     gallows
     word_board  
     misses(word_gen.misses)  
   end
 
   def win_message
-    puts "You won!"
+    puts "WOOOO! You won!"
+    sleep(2)
+    puts state_array[-2]
   end 
 
   def lose_message
-    puts "You really suck"
+    puts "You REALLY suck!!!!"
+    sleep(2)
+    puts state_array[-1]
   end 
 
-  def print_help
-    puts "Seriously?" 
-  end 
 end
 
 
